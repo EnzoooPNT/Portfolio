@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #333, #f5f5f5);
+  }
+
+  nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Changé de 'relative' à 'fixed' */
+    top: 0; /* Ajouté pour fixer la barre de navigation en haut */
+    left: 0; /* Ajouté pour fixer la barre de navigation à gauche */
+    width: 100%; /* Ajouté pour que la barre de navigation s'étende sur toute la largeur de l'écran */
+    padding: 0 20px;
+    z-index: 1000; /* Ajouté pour que la barre de navigation reste au-dessus des autres éléments */
+  }
+  
+  
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 20px;
+      position: relative;
+    }
+
+      
+    nav a:not(.logo):before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+  nav a:not(.logo):hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    margin-top: 80px; /* Ajouté pour compenser la hauteur de la barre de navigation fixe */
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: black;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    text-align: center;
+  }
+  
+  
+
+  .content-container {
+    display: flex;
+    flex-direction: row; /* Modifié pour aligner les éléments en rangées */
+    flex-wrap: wrap; /* Ajouté pour permettre aux éléments de passer à la ligne suivante */
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 2rem); /* Modifié pour que deux blocs tiennent sur une ligne */
+    min-height: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 2s forwards;
+  }
+  
+  
+
+
+  .block:nth-child(2) {
+    animation-delay: 0.25s;
+  }
+
+  .block:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+
+  .block:nth-child(4) {
+    animation-delay: 0.75s;
+  }
+
+  .block img {
+    max-width: 40%;
+    margin-right: 1rem;
+  }
+
+  .text-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 1.25rem;
+  }
+
+  .button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .welcome-text {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .welcome-text {
+    font-size: 2rem; /* Taille de police plus petite que celle de "Articles" */
+    margin: 1; /* Supprime les marges par défaut */
+  }
+  
+
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+
+    <nav>
+        <a class="logo">Enzo's blog</a>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="Apropos.html">À propos</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="articles.html">Articles</a>
+            <a href="contact.html">Contact</a>
+          </div>
+    </nav>
+    
+  <div class="title-container">
+    <div class="title">
+      <h1>Articles</h1>
+      <p class="welcome-text">Suivre l'actualité et ce qui se passe dans le <br> monde de l'informatique me passionne. <br> Voici quelques articles que je vous ai préparé à <br> ce sujet</p>
+    </div>
+  </div>
+      
+  <div class="content-container">
+    <div class="block">
+      <div class="text-container">
+        <img src="images/telework-gac354c026_1920.jpg" alt="Image 1">
+        <p class="text">Le télétravail, une source de danger ?</p>
+      </div>
+      <a href="images/Télétravail | Mon Blog.pdf" target="_blank">
+        <button class="button">Ici</button>
+      </a>
+    </div>
+    <div class="block">
+      <div class="text-container">
+        <img src="images/cyberattaque.jpeg" alt="Image 2">
+        <p class="text">Jusqu'où peuvent aller les  cyberattaques ?</p>
+      </div>
+      <a href="images/Cyberattaques | Mon Blog.pdf" target="_blank">
+        <button class="button">Ici</button>
+      </a>
+    </div>
+    <div class="block">
+      <div class="text-container">
+        <img src="images/defense.jpeg" alt="Image 3">
+        <p class="text">Comment se protéger contre les cyberattaques en entreprise ?​</p>
+      </div>
+      <a href="images/défense informatique | Mon Blog.pdf" target="_blank">
+        <button class="button">Ici</button>
+      </a>
+    </div>
+    <div class="block">
+      <div class="text-container">
+        <img src="images/bigdata.webp" alt="Image 4">
+        <p class="text">Quels enjeux pour le Big Data ? <br> <br> En cours..</p>
+      </div>
+      <a href="" target="_blank">
+        <button class="button">Ici</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page d'accueil</title>
+    <style>
+      /* Styles pour la navbar */
+      nav {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        padding: 0 20px;
+      }
+
+      nav a {
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 20px;
+        position: relative;
+      }
+  
+        
+      nav a:not(.logo):before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #333;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+      }
+  
+    nav a:not(.logo):hover:before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      /* Styles pour le corps de la page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+      }
+      main {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+      }
+
+      .container-R {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: black;
+        border: 2px solid transparent;
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        height: 200px;
+        border-radius: 10px;
+        width: 500px;
+        border-radius: .5em;
+        padding: 10px;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: black;
+        border: 2px solid transparent;
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+        width: 500px;
+        border-radius: .5em;
+        padding: 10px;
+      }
+
+    .container-R a {
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+    }
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+      
+.container:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: black;
+}
+
+      .container-R:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-color: black;
+      }
+      
+      .container h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      
+      .container p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      
+      .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url('images/pen-gf902ecca9_1920.jpg');
+        background-size: cover;
+        filter: blur(5px);
+      }
+
+      .background-image{
+        background-color: #000;
+      }
+
+      .box {
+        display: grid;
+        width: 1100px;
+        grid-template-columns: 100px 1000px 1000px;
+        
+        
+        display: grid;
+        grid-gap: 1.5rem;
+      }
+      
+      .box :first-child {
+        align-self: center;
+        }
+         
+</style>
+
+</head>
+  <body>
+    <nav>
+      <a class="logo">Enzo's blog</a>
+      <div>
+        <a href="index.html">Accueil</a>
+        <a href="Apropos.html">À propos</a>
+        <a href="entreprise.html">Entreprise</a>
+        <a href="articles.html">Articles</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+
+    <div class="background-image"></div>
+
+    <div class="cont">
+        <div class="container">
+            <h1>Enzo's Blog</h1>
+            <p>Bienvenue sur mon blog, vous y trouverez tout type d'information divers et variés sur moi. Mon stage 2023 chez Nickel, des articles etc..
+            </p>
+            <p>Bonne visite !</p>
+        </div>
+    </div>
+    <main class="box">
+        <div class="container-R">
+            <h2>Article</h2>
+            <a href="articles.html">En savoir plus</a>
+          </div>
+          
+          <div class="container-R">
+            <h2>Intérresé</h2>
+            <a href="contact.html">Contactez-moi</a>
+          </div>    
+    </main>
+
+    <div class="background-color"></div>
+
+  <h6> © 2022 Enzo PINOT. All rights reserved</h6>
+

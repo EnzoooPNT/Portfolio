@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A propos</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<style>
+
+  nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 0 20px;
+  }
+  
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 20px;
+      position: relative;
+    }
+
+      
+    nav a:not(.logo):before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+  nav a:not(.logo):hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  .bloc {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 96,5%;
+    transition: box-shadow 0.3s, transform 0.3s;
+    padding: 1rem;
+  }
+
+  .bloc-diff {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 96,5%;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .bloc:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .bloc-split {
+    display: flex;
+    height: 100%;
+  }
+
+  .bloc-split .left, .bloc-split .right {
+    flex: 1;
+  }
+  .left {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .left h4{
+    font-size: 3rem;
+    font-weight: 100;
+  }
+
+  .left h1{
+    font-size: 4rem;
+
+  }
+
+  .right {
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  p, h3 {
+    text-align: justify;
+  }
+
+  .bouton-design {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .bouton-design2 {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .separation-design {
+    border-bottom: 3px solid #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .horizontal-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .horizontal-list li {
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .centered-text {
+    text-align: center;
+  }
+
+  /* Ajoutez ceci dans la section <style> */
+.small-image {
+  width: 500px; /* Ajouté pour définir la largeur de l'image */
+    height: 250px; /* Ajouté pour définir la hauteur de l'image */
+}
+
+.logo-linkedin {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.linkedin-logo {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo">Enzo's blog</a>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="Apropos.html">À propos</a>
+      <a href="entreprise.html">Entreprise</a>
+      <a href="articles.html">Articles</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="bloc">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="centered-text">
+        <h1 style="text-align:center">Enzo Pinot</h1>
+        <p style="text-align:center">
+          Passionné par l'informatique depuis mon plus jeune âge, j'ai décidé il y a maintenant deux ans de me lancer sur un bac + 5 dans ce domaine, au sein de l'école Ynov Nantes Campus.
+        </p>
+        <a href="https://www.linkedin.com/in/votre-profil/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" alt="Logo LinkedIn" class="linkedin-logo">
+        </a>
+        <a href="https://www.ynov.com/campus/nantes/" target="_blank">
+          <button class="bouton-design">Ynov Nantes Campus</button>
+        </a>
+      </div>
+      <img src="images/IMG_3729.jpg" alt="votre_image" style="max-width: 10%; height: auto;">
+    </div>
+  </div>
+
+    <div class="bloc-diff">
+        <div class="bloc-split">
+          <div class="left">
+            <h1 style="text-align: center;">Mon Profil</h1>
+            <h4>Nom : Pinot</h4>
+            <h4>Prénom : Enzo</h4>
+            <h4>Age : 20 ans</h4>
+            <h4>Langues : <br> -Français (maternelle) <br>-Anglais (scolaire)</h4>
+            <a href="images/CV Enzo Pinot Cybersécurité.pdf" target="_blank">
+              <button class="bouton-design2">MON CV</button>
+            </a>
+          </div>
+          <div class="right">
+            <h3>Expériences professionnelles</h3>
+            <p>0/2020 - 09/2021
+              <br>
+              La Boite à Pixels | Nantes | Bénévolat Community manager
+              ​<br><br>
+              06/2021 - 07/2021
+              <br>
+              Leclerc | Clisson | Intérim Drive
+              <br><br>
+              09/2021 - 11/2021
+              <br>
+              Leclerc | Clisson | Intérim Mise en rayon au frais
+              <br><br>
+              06/2021 - 07/2021
+              <br>
+              Altor | Clisson | Intérim Fabrication salle de bain
+              <br><br>
+              05/2022 - 06/2021
+              <br>
+              Boutin | Gorges | Intérim Mise en bouteille
+              <br><br>
+              03/2023 - 09/2023
+              <br>
+              Nickel | Nantes | Stage Administrateur base de données
+            
+
+            <h3 class="separation-design">
+
+            </h3>Compétences</h3>
+            <p>- Organisé<br><br>- Autonome<br><br>- Esprit d'équipe<br><br>- Capacité à actualiser ses  connaissance<br><br>- Gestion du stress
+
+            <h3 class="separation-design">
+
+            </h3>Compétences techniques</h3>
+            <p>Base de données : SQL Server, MySQL
+              <br><br>
+              Systèmes : Windows, Linux, Mac OS
+              <br><br>
+              Développement : Javascript, C#, PHP, C/C++, Java, Python, html, css
+              <br><br>
+              Framework : VueJS, Laravel, ReactJS
+              <br><br>
+              GitHub de mes projets informatiques : https://github.com/EnzoooPNT/My-Projects</p>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="bloc">
+      <h1 style="text-align: center;">Mon parcours</h1>
+      <img src="images/Capture d’écran 2023-03-21 à 15.03.40.png" alt="Description de l'image" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+    </div>
+
+    <div class="bloc" style="display: flex; align-items: center;">
+      <div>
+        <h1 style="text-align: center;">Pourquoi la cybersécurité ?</h1>
+        <br>
+        <p>Durant une longue période de mon adolescence, j'ai voulu faire partie de la police, et plus précisément dans le RAID (l'unité d'élite de la police nationale).
+          <br>
+        J'ai toujours eu cet instinct de protection. En me lançant dans l'informatique, mon rêve était donc de combiner celui-ci et les nouvelles technologies.</p>
+      </div>
+      <img src="images/Capture d’écran 2023-03-21 à 15.18.55.png" alt="Description de l'image" class="small-image" style="margin-left: 20px;">
+    </div>
+
+</body>
+</html>

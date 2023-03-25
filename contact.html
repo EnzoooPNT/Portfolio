@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff; /* Modifiez cette ligne */
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 20px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    nav a:not(.logo):before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:not(.logo):hover:before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 60vh;
+      background-color: #fff;
+    }
+
+    .title h1 {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .title p {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        background-color: #f5f5f5;
+        flex-direction: column; /* Ajoutez cette ligne pour organiser les éléments verticalement */
+        padding-top: 1rem;
+    }
+
+    .contact-details {
+        display: flex;
+        justify-content: space-between; /* Changez cette ligne pour séparer les éléments sur toute la largeur */
+        align-items: center;
+        width: 100%; /* Ajoutez cette ligne pour que le conteneur occupe toute la largeur */
+        padding: 0 1rem; /* Ajoutez cette ligne pour ajouter un peu d'espace sur les côtés */
+    }
+      
+  
+    .contact-info p {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0 4rem;
+    }
+
+    .contact-info a {
+        display: inline-block;
+        margin-left: 4rem;
+        width: 10px; /* Changez cette valeur pour modifier la largeur */
+        height: 10px; /* Changez cette valeur pour modifier la hauteur */
+        background-size: cover;
+    }
+
+    #linkedin-logo {
+        width: 40px; /* Changez cette valeur pour modifier la largeur */
+        height: 40px; /* Changez cette valeur pour modifier la hauteur */
+      }
+
+    .contact-info a:hover {
+      opacity: 0.8;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 60vh;
+    }
+
+    .map {
+      width: 80%;
+      height: 80%;
+    }
+    
+    nav div a:first-child {
+        margin-left: 40px; /* Ajoutez cette ligne pour ajouter de l'espace à gauche */
+    }
+
+    .phone {
+        margin-right: 1rem; /* Ajoutez cette ligne pour ajouter de l'espace à droite */
+      }
+      
+
+    .contact-info h2 {
+        font-size: 3rem; /* Augmente la taille de la police */
+        text-align: center; /* Centre le titre */
+        margin-bottom: 3rem; /* Ajoute de l'espace sous le titre */
+    }
+      
+      
+
+
+      
+  </style>
+</head>
+<body>
+    <nav>
+        <a class="logo">Enzo's blog</a>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="Apropos.html">À propos</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="articles.html">Articles</a>
+            <a href="contact.html">Contact</a>
+          </div>
+    </nav>
+    
+    <div class="contact-container">
+        <div class="contact-info">
+    <h2>Contact</h2>
+    <div class="contact-details"> <!-- Conteneur pour les textes et le logo -->
+      <p>Cugand</p>
+      <p>enzopinot44190@gmail.com</p>
+      <p class="phone">06.58.97.67.11</p>
+    </div>
+  </div>
+    </div>
+    
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.2969212343856!2d-1.2667657844153264!3d47.16872712355095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4807b22ac18e0ab7%3A0x3d3a626ec1280fa5!2sCugand!5e0!3m2!1sfr!2sfr!4v1647916946725!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</body>
+</html>    
+     
